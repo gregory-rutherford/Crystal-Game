@@ -44,7 +44,6 @@ function crystalClick() {
 
 function crystalDom() {
   $.each(numberOptions, function(index, value) {
-    // console.log(index, value);
     var crystalImage = $("<img>");
     crystalImage.addClass("crystal-image");
     crystalImage.attr(
@@ -59,12 +58,10 @@ function crystalDom() {
 function winLoss() {
   $("#currentTotal").text(scoreCounter);
   if (scoreCounter === targetNumber) {
-    alert("You win!");
     wins ++;
     $("#wins").text("Wins: " + wins);
     reset();
   } else if (scoreCounter >= targetNumber) {
-    alert("You lose!!");
     losses ++;
     $("#losses").html("Losses: " + losses);
     reset();
@@ -78,6 +75,8 @@ function reset() {
   $("#numberGuess").text(targetNumber);
   console.log(targetNumber);
   $("#currentTotal").text(scoreCounter);
+  console.log(numberOptions);
+
 }
 //reset function
 // you need to reset the score counter, pick a new number and assign new values to each crystal
