@@ -2,3 +2,38 @@ img {
     width: 200px;
     height: 200px;
 }
+
+* {
+    text-align: center;
+    background: plum !important;
+}
+
+header {
+    font-family: 'Racing Sans One', cursive;
+    font-size: 70px;
+}
+
+h1 {
+    font-family: 'Source Serif Pro', serif;
+    font-weight: 300;
+    margin-top: 10px;
+}
+
+.jumbotron {
+    margin-bottom: 0 !important;
+    padding-bottom: 20px !important;
+}
+
+span {
+    font-weight: 600;  
+}
+
+img:hover {
+    opacity: 0.8
+}
+
+hr {
+    border-top: 4px solid black !important;
+    border-radius: 2px !important;
+}
+
