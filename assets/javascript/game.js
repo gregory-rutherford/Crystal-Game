@@ -1,6 +1,15 @@
-//target number global
+$(function() {
+  console.log( "ready!" );
+});
+
+//target number global\
 var targetNumber = Math.floor(Math.random() * 120) + 19;
-var numberOptions = [1, 3, 7, 12];
+var numberOptions = [Math.floor(Math.random() * 12) + 1, Math.floor(Math.random() * 12) + 1, 
+  Math.floor(Math.random() * 12) + 1, Math.floor(Math.random() * 12) + 1];
+
+
+
+
 var scoreCounter = 0;
 var wins = 0;
 var losses = 0;
@@ -8,30 +17,30 @@ var losses = 0;
 $("#numberGuess").text(targetNumber);
 $("#currentTotal").text(scoreCounter);
 
-shuffle(numberOptions);
+// shuffle(numberOptions);
 crystalDom();
 crystalClick();
 
-function shuffle(array) {
-  var currentIndex = array.length,
-    temporaryValue,
-    randomIndex;
+// function shuffle(array) {
+//   var currentIndex = array.length,
+//     temporaryValue,
+//     randomIndex;
 
-  // While there remain elements to shuffle...
-  while (0 !== currentIndex) {
-    // Pick a remaining element...
-    randomIndex = Math.floor(Math.random() * currentIndex);
-    currentIndex -= 1;
+//   // While there remain elements to shuffle...
+//   while (0 !== currentIndex) {
+//     // Pick a remaining element...
+//     randomIndex = Math.floor(Math.random() * currentIndex);
+//     currentIndex -= 1;
 
-    // And swap it with the current element.
-    temporaryValue = array[currentIndex];
-    array[currentIndex] = array[randomIndex];
-    array[randomIndex] = temporaryValue;
-  }
+//     // And swap it with the current element.
+//     temporaryValue = array[currentIndex];
+//     array[currentIndex] = array[randomIndex];
+//     array[randomIndex] = temporaryValue;
+//   }
 
-  return array;
-}
-console.log(numberOptions);
+//   return array;
+// }
+// console.log(numberOptions);
 
 function crystalClick() {
   $(".crystal-image").on("click", function() {
@@ -69,14 +78,16 @@ function winLoss() {
 }
 
 function reset() {
-  shuffle(numberOptions);
+  numberOptions = [Math.floor(Math.random() * 12) + 1, Math.floor(Math.random() * 12) + 1, 
+    Math.floor(Math.random() * 12) + 1, Math.floor(Math.random() * 12) + 1];
+  // shuffle(numberOptions);
+  $("img").remove();
+  crystalDom();
+  crystalClick();
   scoreCounter = 0;
   targetNumber = Math.floor(Math.random() * 120) + 19;
   $("#numberGuess").text(targetNumber);
   console.log(targetNumber);
   $("#currentTotal").text(scoreCounter);
   console.log(numberOptions);
-
-}
-//reset function
-// you need to reset the score counter, pick a new number and assign new values to each crystal
+  }
