@@ -1,2 +1,2 @@
-# Crystal-Game
-Jquery and javascript crystal picker game
+# Crystal-Game 
+Crystal game built using Javascript with the jquery library.
