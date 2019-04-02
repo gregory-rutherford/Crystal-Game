@@ -30,7 +30,7 @@ function crystalDom() {
     crystalImage.addClass("crystal-image");
     crystalImage.attr(
       "src",
-      "https://png2.kisspng.com/sh/615c41794299fb4435ffc5f8a7a40683/L0KzQYm3VsMxN5p4gJH0aYP2gLBuTfNzgaR5ed42YXX2hLnslPlke15oiut8dHHvPcL8ggJ1gl46eqUDNEe1SIrsgcdiPl89UKs9NEmzR4K8U8A1OWU9UKoBNEm8PsH1h5==/kisspng-crystal-aesthetics-crystal-quartz-5b3847289ea7a6.8894490715304148886499.png"
+      "https://cdn.shopify.com/s/files/1/1061/1924/files/Crystal_Magic_Ball.png?9898922749706957214"
     );
     crystalImage.attr("data-crystalvalue", value);
     $("#crystals").append(crystalImage);
